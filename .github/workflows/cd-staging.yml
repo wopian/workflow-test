@@ -1,9 +1,9 @@
-name: Staging Deployment
+name: Lint
 on:
   workflow_dispatch:
   push:
     branches:
-      - staging
+      - develop
 env:
   FORCE_COLOR: true
   NODE_VERSION: lts/*
@@ -26,3 +26,9 @@ jobs:
           pr_assignee: wopian
           pr_label: "Priority 3 Medium,Type: Deployment"
           pr_allow_empty: true
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint
+        run: echo "Hello"
