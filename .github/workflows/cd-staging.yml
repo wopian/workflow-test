@@ -8,15 +8,8 @@ env:
   FORCE_COLOR: true
   NODE_VERSION: lts/*
 jobs:
-  lint:
-    name: Lint
-    runs-on: ubuntu-latest
-    steps:
-      - name: Does something
-        run: echo "Hello World"
   create_pr:
     name: Create New PR
-    needs: [lint]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repo
