@@ -31,5 +31,5 @@ jobs:
           pr_body: Automated PR from develop to staging
           pr_reviewer: wopian
           pr_assignee: wopian
-          pr_label": Priority%3A+3+-+Medium,Type%3A+Deployment
+          pr_label: Priority%3A+3+-+Medium,Type%3A+Deployment
           pr_allow_empty: true
