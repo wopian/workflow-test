@@ -8,6 +8,18 @@ env:
   FORCE_COLOR: true
   NODE_VERSION: lts/*
 jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Does something
+      - run: echo "Hello World"
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Does something
+      - run: echo "Deployed Hello World"
   create_pr:
     name: Create New PR
     needs: [build, deploy]
