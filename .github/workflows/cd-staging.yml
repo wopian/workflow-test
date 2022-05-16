@@ -39,4 +39,4 @@ jobs:
           assignees: wopian, alexcosta97
           reviewers: wopian, alexcosta97
           base: staging
-          branch: development
+          branch: develop
