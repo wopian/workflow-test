@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - develop
+      - staging
 env:
   FORCE_COLOR: true
   NODE_VERSION: lts/*
