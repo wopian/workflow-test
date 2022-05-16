@@ -3,27 +3,20 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - staging
+      - develop
 env:
   FORCE_COLOR: true
   NODE_VERSION: lts/*
 jobs:
-  build:
-    name: Build
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
     steps:
       - name: Does something
         run: echo "Hello World"
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Does something
-        run: echo "Deployed Hello World"
   create_pr:
     name: Create New PR
-    needs: [build, deploy]
+    needs: [lint]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repo
