@@ -1,9 +1,8 @@
 name: Lint
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - develop
+  schedule:
+    - cron: "*/30 * * * *"
 env:
   FORCE_COLOR: true
   NODE_VERSION: lts/*
